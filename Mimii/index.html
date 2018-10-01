@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>
+        Ohne Krimi geht die
+        <b id="abc">Mimi</b>
+        nie ins Bett
+    </p>
+	
+</body>
+	<script>
+        console.log(window.document.getElementById("abc").firstChild.nodeValue)
+    </script>
+</html>
+
+<!--
+    Das document-Object verfügt über die von DOM defeniert Methode getElementsByTagName()
+    Achtung! : CaseSensetive; Achtung! : Elementssss
+
+	console.log: Gibt auf die Entwickler-Konsole einen string aus
+	
+	Achtung wenn wir das script im head-bereich belassen, wird es zu einem Zeitpunkt ausgeführt, wo das DOM noch nicht fertig aufgebaut ist im Browser. Das gibt eine Fehlermeldung in der Web-Console.
+	Deshalb den <script>-Abschnitt ganz unten, vor dem </html> Tag einfügen
+	
+	getElementsByTagName("b") liefert eine Liste aller b-Element-Knoten aus dem ganzen HTML-Dokument.
+
+	Merksatz: Ein Attribut mit dem Namen
+->
