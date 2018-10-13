@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Test</title>
+</head>
+<body>
+
+	<h1>Query Übung 1.3</h1>
+	
+	<button onClick="funktion1()">Übung1.3.1-Code</button>
+	<button onClick="funktion2()">Übung1.3.2-Code</button>
+	<button onClick="">Übung1.3.3-Code | (autm. - onload)</button>
+
+</body>
+	<script>
+		function funktion1(){
+		
+			function getName(){
+				return "Calvin";
+			}
+			
+			var boy = getName;
+			var name = boy();
+			alert(name);
+		}
+		
+		function funktion2(){
+		
+			var boy = function(){
+				return "Calvin";
+			}
+			var name = boy();
+			alert(name);
+		}
+		
+		window.onload = function(){
+			alert("Seite geladen");
+		}
+		
+	</script>
+</html>

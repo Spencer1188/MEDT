@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Unbenanntes Dokument</title>
+	<style>
+	
+		.red{
+			color: red;
+		}
+		
+		.black{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<fieldset>
+		<legend>Lösung 1 mit Onclick - Übung 1.3.1.1</legend>
+	<p onClick="change(this)">Kapitel 1</p>
+	<p onClick="change(this)">Kapitel 2</p>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Lösung 2 mit onload Funktion - Übung 1.3.2.1</legend>
+	<p>Kapitel 1</p>
+	<p>Kapitel 2</p>
+	</fieldset>
+	
+</body>
+	<script>
+		
+		function change(el){
+			el.className = "red";
+		}
+		
+		window.onload = function(){
+			var blocks = document.getElementsByTagName("p");
+			for (var i=0; i<blocks.length;i++){
+				blocks[i].onclick = function(){
+					this.className = "red";
+				}
+			}
+		}
+		
+	</script>
+</html>
