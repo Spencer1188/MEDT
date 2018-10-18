@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aufgabe 1.5.3</title>
+</head>
+<body>
+
+	<p>Kapitel 1</p>
+	<p>Kapitel 2</p>
+	<p>Kapitel 3</p>
+	<p>Kapitel 4</p>
+	<p>Kapitel 5</p>
+	
+</body>
+	<script>	
+		
+		window.onload = function() {
+			var obj = document.getElementsByTagName('p');
+			for(i=0; i < obj.length; i++) {
+					let a = i;
+					obj[i].onclick = function() {
+						alert('Das ist der ' + (a+1) + '.te Absatz!');
+					}
+			}
+		}
+	</script>
+</html>
