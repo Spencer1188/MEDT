@@ -10,7 +10,7 @@
 		}
 		
 		.black{
-			color: green;
+			color: black;
 		}
 	</style>
 </head>
@@ -30,18 +30,28 @@
 </body>
 	<script>
 		
-		function change(el){
-			el.className = "red";
-		}
+		/*function change(el){
+			
+			if(el.className == "red"){
+			   	el.className="black";
+			   }else{
+				el.className = "red";
+			   }
+		} */
 		
-		window.onload = function(){
+		 window.onload = function(){
 			var blocks = document.getElementsByTagName("p");
 			for (var i=0; i<blocks.length;i++){
 				blocks[i].onclick = function(){
-					this.className = "red";
+					if(this.className == "red"){
+					   	this.className = "balck";
+					   }else{
+						  
+					this.className = "red"; 
+					   }
 				}
 			}
-		}
+		} 
 		
 	</script>
 </html>
