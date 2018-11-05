@@ -5,11 +5,35 @@
 <title>Unbenanntes Dokument</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 	<script src="../galleria-1.5.7/galleria-1.5.7.js"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<style>
+	
+		body,html{
+			width: 100%;
+			height: 100%;
+			padding: 0px;
+			margin: 0px;
+			background-color: black;
+		}
+		
+	</style>
 </head>
 <body>
 	
+	<div class="galleria">
+		<img src="1064053_eb.jpg">
+		<img src="1442739-md-fq800.png">
+		<img src="images.jpg">
+	</div>
 	
 	<script>
+		(function(){
+			Galleria.loadTheme('../galleria-1.5.7/themes/classic/galleria.classic.min.js');
+			Galleria.run('.galleria',{
+				height: 0.45
+			});
+			console.writeln= "laoded";
+		})()
 	</script>
 	
 </body>
